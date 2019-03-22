@@ -11,7 +11,7 @@ public class FooFooTest
 		foo.scoopUp(new FieldMouse()).bopOn(FieldMouse.head);
 	}
 
-	@Test(expected = GoodFairy.WarningException.class)
+	@Test
 	public void shouldBeGivenWarningOnSecondTry() throws GoodFairyException
 	{
 		Foo foo = Rabbit.Instance(Size.little);
