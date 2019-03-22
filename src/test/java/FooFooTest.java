@@ -13,7 +13,7 @@ public class FooFooTest
 	}
 
 	@Test
-	public void shouldBeGivenWarningOnSecondTry() throws GoodFairyException
+	public void shouldBeGivenWarningOnSecondTry()
 	{
 		Foo foo = Rabbit.Instance(Size.little);
 
