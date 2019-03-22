@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.fail;
 
 public class FooFooTest
 {
@@ -11,8 +12,8 @@ public class FooFooTest
 		foo.scoopUp(new FieldMouse()).bopOn(FieldMouse.head);
 	}
 
-	@Test(expected = GoodFairy.WarningException.class)
-	public void shouldBeGivenWarningOnSecondTry() throws GoodFairyException
+	@Test
+	public void shouldBeGivenWarningOnSecondTry()
 	{
 		Foo foo = Rabbit.Instance(Size.little);
 
@@ -25,6 +26,10 @@ public class FooFooTest
 			catch (GoodFairy.WarningException e)
 			{
 				assertThat(e.getMessage()).contains("I don't want to see you");
+			}
+			catch (GoodFairy.ConsequenceException e)
+			{
+				fail("should not have consequence on first or second try");
 			}
 		}
 	}
