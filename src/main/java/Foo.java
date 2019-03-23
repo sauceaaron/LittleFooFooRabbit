@@ -18,7 +18,7 @@ public class Foo extends Rabbit
 	{
 		bopCount++;
 
-		if (bopCount < 3)
+		if (bopCount <= 3)
 		{
 			throw new GoodFairy.WarningException();
 		}
