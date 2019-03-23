@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
 public class GoodFairy
 {
 
@@ -9,7 +13,17 @@ public class GoodFairy
 		@Override
 		public String getMessage()
 		{
-			return "I don't want to see you...";
+			StackTraceElement element = getStackTrace()[0];
+			String who = element.getClassName() + " " + element.getClassName();
+			FieldMouse[] victims = new FieldMouse[3];
+			String what = element.getMethodName();
+			String where = FieldMouse.class.getFields()[0].getName();
+
+			return "Little bunny " + who +  " " +
+					"I don't want to see you " +
+					"scoopUp() "  + victims.getClass().getName() + " and "
+					+ what + "() the " + where;
+
 		}
 	}
 }

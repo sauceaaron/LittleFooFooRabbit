@@ -25,6 +25,8 @@ public class FooFooTest
 			}
 			catch (GoodFairy.WarningException e)
 			{
+				e.printStackTrace();
+				System.out.println(e.getMessage());
 				assertThat(e.getMessage()).contains("I don't want to see you");
 			}
 			catch (GoodFairy.ConsequenceException e)
