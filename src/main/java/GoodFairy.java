@@ -15,8 +15,8 @@ public class GoodFairy
 			String what = element.getMethodName();
 			String where = FieldMouse.class.getFields()[0].getName();
 
-			return "Little bunny " + who +  " " +
-					"I don't want to see you " +
+			return "Little bunny " + who +
+					" I don't want to see you " +
 					"scoopUp() "  + victims.getClass().getName() + " and "
 					+ what + "() the " + where;
 
